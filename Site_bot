@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+</head>
+<body>
+    <h1>Welcome to My Personal Website!</h1>
+    <div id="chatbot"></div>
+    <input type="text" id="userInput" placeholder="Ask me anything...">
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        function sendMessage() {
+            const userInput = document.getElementById('userInput').value;
+            const chatbotDiv = document.getElementById('chatbot');
+            chatbotDiv.innerHTML += `<p>You: ${userInput}</p>`;
+            // Here you can add your bot's response logic
+            chatbotDiv.innerHTML += `<p>Bot: I'm just a simple bot!</p>`;
+            document.getElementById('userInput').value = ''; // Clear input
+        }
+    </script>
+</body>
+</html>
